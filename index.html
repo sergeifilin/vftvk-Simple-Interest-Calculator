@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
         <title>Simple Interest Calculator</title>
     </head>
-    
-       
-    <body>
+
     <div class="maindiv">
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="style.css"> 
+    <body>
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input onchange="updateRate()" type="range"  id="rate" min="1" max="20" step="0.25" value="10.25"> 
+        Amount <input type="number"  id="principal" <br/>
+        Rate <input type="range"  id="rate" min="1" max="20" step="0.25" value="10.25" oninput="updateRate()">
         <span id="rate_val">
-           10.25%
+          10.25
         </span> <br/>
         No. of Years
         <select id="years">
@@ -30,16 +29,16 @@
             <option value="10">10</option>
         </select>
           <br/>
-        Interest : <span id="result"></span><br>
 
         <button onclick="compute()">Compute Interest</button>
+        <br/>
         <span id="result">
 
         </span>
         <footer>
             &#169; This Calculator belongs to Sergei Filin
         </footer>
-    </div>
-    </body>
 
+    </body>
+    </div>
 </html>
